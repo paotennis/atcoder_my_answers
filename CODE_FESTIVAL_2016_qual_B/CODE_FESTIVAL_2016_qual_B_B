@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int A,B,N;
+	char S[100010]={'\0'};
+	int i;
+	int fs=0,clear=0;
+	int flag=0;
+
+	scanf("%d %d %d\n%s",&N,&A,&B,S);
+	for(i=0;i<N;i++,flag=0){
+		if(S[i]=='b'){
+			if(clear<A+B&&fs<B){
+				clear++;
+				fs++;
+				printf("Yes\n");
+				flag=1;
+			}
+		}else if(S[i]=='a'){
+			if(clear<A+B){
+				clear++;
+				printf("Yes\n");
+				flag=1;
+			}
+		}
+		if(flag==0){
+			printf("No\n");
+		}
+	}
+
+	return 0;
+}
