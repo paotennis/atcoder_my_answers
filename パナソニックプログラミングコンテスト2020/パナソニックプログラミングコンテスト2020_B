@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+ 
+int main(void){
+	long int h,w;
+	long int i;
+ 
+	scanf("%ld %ld",&h,&w);
+	if(h==1||w==1){
+		printf("1");
+		exit(0);
+	}
+	if(h%2==1&&w%2==1){
+		printf("%ld",h*w/2+1);
+	}else{
+		printf("%ld",h*w/2);
+	}
+	return 0;
+}
